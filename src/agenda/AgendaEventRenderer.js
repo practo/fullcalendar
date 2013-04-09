@@ -1,4 +1,3 @@
-
 function AgendaEventRenderer() {
 	var t = this;
 	
@@ -83,6 +82,8 @@ function AgendaEventRenderer() {
                     window.clearInterval(timelineInterval);
                 }
                 timelineInterval = window.setInterval(setCurrentTimeMarker, 60000);
+                ///Making setCurrentTimeMarker globally accessible
+                window.setCurrentTimeMarker = setCurrentTimeMarker;
                 setCurrentTimeMarker();
 	}
 	
